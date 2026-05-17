@@ -4,31 +4,62 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>ASP.Net Project</title>
     <style>
-        .navbar-nav {
-            list-style-type: none;
+        .main-header {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
         }
-
+        .navbar {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .navbar ul {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+        .navbar li a {
+            text-decoration: none;
+        }
+        footer {
+            font:icon;
+            text-align: center;
+            background-color:cornflowerblue;
+            padding: 10px;
+            
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <header>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav>
-                            <li>Home</li>
-                        </ul>
+        <header class="main-header">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="DisplayData.aspx">Display Data</a></li>
+                    <li><a href="InsertData.aspx">Insert Data</a></li>
+                    <li><a>Delete Data</a></li>
+                    <li><a>Update Data</a></li>
+                </ul>
+            </nav>
         </header>
-        <div>
+        <div class="displayFiles">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <footer>
+            <div class="foot">
+                <p> CRUD Operation by DataBind @2026 | Roshan Prasad Gupta</p>
+            </div>
+        </footer>
     </form>
 </body>
 </html>
